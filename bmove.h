@@ -5,7 +5,7 @@
 #include<string>
 #include<vector>
 
-typedef int (*attack_modifier)();
+typedef double (*attack_modifier)();
 typedef void (*move_function)();
 
 class bmove {

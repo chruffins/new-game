@@ -6,7 +6,7 @@
 #include<unordered_map>
 #include<string>
 
-typedef int (*attack_modifier)(double);
+typedef double (*attack_modifier)(double);
 
 namespace something
 {
@@ -14,7 +14,7 @@ namespace something
         {"flammable", is_flammable},
     };
 
-    int is_flammable(double flammable) {
+    double is_flammable(double flammable) {
         return flammable ? 2 : 1;
     }
 } // namespace name
