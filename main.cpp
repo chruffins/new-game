@@ -6,7 +6,7 @@
 
 void print_copyright_notice() {
     std::cout << "Chris's New Game  Copyright (C) 2022  Chris Lee" << std::endl;
-    std::cout << "This program comes with ABSOLUTELY NO WARRANTY; Kill yourself." << std::endl;
+    std::cout << "This program comes with ABSOLUTELY NO WARRANTY; whatever that means." << std::endl;
 }
 
 void must_init(bool test, const char *test_name) {
@@ -21,4 +21,5 @@ int main() {
     must_init(al_install_keyboard(), "keyboard");
 
     print_copyright_notice();
+    //std::cout << "size of long = " << sizeof(long) << std::endl;
 }

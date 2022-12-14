@@ -3,14 +3,14 @@
 
 // This file describes attack modifiers, which multiply damage and/or healing.
 
-#include<map>
+#include<unordered_map>
 #include<string>
 
 typedef int (*attack_modifier)(double);
 
 namespace something
 {
-    extern std::map<std::string, attack_modifier> modifiers = {
+    extern std::unordered_map<std::string, attack_modifier> modifiers = {
         {"flammable", is_flammable},
     };
 
