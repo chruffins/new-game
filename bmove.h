@@ -8,6 +8,13 @@
 typedef double (*attack_modifier)();
 typedef void (*move_function)();
 
+enum bmove_targets {
+    SELF,
+    ONE,
+    MANY,
+    ALL,
+};
+
 class bmove {
 private:
 

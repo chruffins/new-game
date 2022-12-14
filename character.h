@@ -9,6 +9,9 @@ private:
     std::string name;
     int money;
 
+    int health;
+    int max_health;
+
     int speed;
 
     int phys;
@@ -19,8 +22,8 @@ private:
 public:
     character();
     character(std::string, int);
-    character(std::string, int, int, int, int, int);
-    character(std::string, int, int, int, int, int, std::unordered_map<std::string, double>);
+    character(std::string, int, int, int, int, int, int);
+    character(std::string, int, int, int, int, int, int, std::unordered_map<std::string, double>);
 
     double get_modifier(std::string);
     void set_modifier(std::string, double);
@@ -34,6 +37,9 @@ character::character() {
     this->money = 0;
 
     this->modifiers = std::unordered_map<std::string, double>();
+
+    this->health = 20;
+    this->max_health = 20;
 }
 
 character::character(std::string name, int money) {
@@ -41,9 +47,12 @@ character::character(std::string name, int money) {
     this->money = money;
 
     this->modifiers = std::unordered_map<std::string, double>();
+
+    this->health = 20;
+    this->max_health = 20;
 }
 
-character::character(std::string name, int money, int speed, int phys, int agil, int mage) {
+character::character(std::string name, int money, int speed, int phys, int agil, int mage, int health) {
     this->name = name;
     this->money = money;
 
@@ -54,9 +63,12 @@ character::character(std::string name, int money, int speed, int phys, int agil,
     this->mage = mage;
 
     this->modifiers = std::unordered_map<std::string, double>();
+
+    this->health = health;
+    this->max_health = health;
 }
 
-character::character(std::string name, int money, int speed, int phys, int agil, int mage, std::unordered_map<std::string, double> modifiers) {
+character::character(std::string name, int money, int speed, int phys, int agil, int mage, int health, std::unordered_map<std::string, double> modifiers) {
     this->name = name;
     this->money = money;
 
@@ -67,6 +79,9 @@ character::character(std::string name, int money, int speed, int phys, int agil,
     this->mage = mage;
 
     this->modifiers = modifiers;
+
+    this->health = health;
+    this->max_health = health;
 }
 
 double character::get_modifier(std::string mod_name) {
