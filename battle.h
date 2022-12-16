@@ -25,7 +25,7 @@ public:
     
     bool is_ended();
     int get_winners();
-    
+
     std::vector<character> get_players();
     std::vector<character> get_enemies();
     character get_player_character(int);
