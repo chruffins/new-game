@@ -3,6 +3,7 @@
 #include <allegro5/allegro.h>
 
 #include "error_codes.h"
+#include "bmove_list.h"
 
 void print_copyright_notice() {
     std::cout << "Chris's New Game  Copyright (C) 2022  Chris Lee" << std::endl;
@@ -17,9 +18,20 @@ void must_init(bool test, const char *test_name) {
 }
 
 int main() {
+    bmove_description b = bmove_description("Kick", "The user kicks a target.", 20, 0.5f, NULL, NULL);
+
     must_init(al_init(), "allegro");
     must_init(al_install_keyboard(), "keyboard");
 
     print_copyright_notice();
+
+    std::cout << std::endl;
+
+    //for (auto i = bmoves_list.begin(); i != bmoves_list.end(); ++i) {
+    //    bmoves_list[i->first].print();
+    //}
+
+    b.print();
+
     //std::cout << "size of long = " << sizeof(long) << std::endl;
 }

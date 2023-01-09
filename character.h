@@ -30,6 +30,11 @@ public:
     void reset_modifiers();
 
     bool change_money(int);
+    bool is_alive();
+
+    int get_speed();
+
+    std::string get_name();
 };
 
 character::character() {
@@ -104,6 +109,18 @@ bool character::change_money(int change) {
     } else {
         return false;
     }
+}
+
+bool character::is_alive() {
+    return health > 0;
+}
+
+int character::get_speed() {
+    return speed;
+}
+
+std::string character::get_name() {
+    return this->name;
 }
 
 #endif
