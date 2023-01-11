@@ -1,0 +1,4 @@
+//move_code (name in move map)    name    desc    power   weight  atk_bonus_code  effect_func_code
+kick	Kick	The user throws a kick at a target.	20	0.5	0	0
+punch	Punch	The user punches a target.	16	0.4	0	0
+piss	Piss	The user attempts to pee on the target.	5	1	0	0

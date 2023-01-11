@@ -13,6 +13,7 @@
 enum BATTLE_SIDE {
     ALLIES = 0,
     ENEMIES = 1,
+    NONE = 2,
 };
 
 class battle {
@@ -33,35 +34,5 @@ public:
     character get_player_character(int);
     character get_enemy_character(int);
 };
-
-bool battle::is_ended() {
-    // TODO: actually fix this
-    return enemy_characters.size() == 0; // fix this later!!
-}
-
-bool battle::is_players_dead() {
-    for (int i = 0; i < player_characters.size(); i++) {
-        if (player_characters[i].is_alive()) {
-            return false;
-        }
-    }
-    return true;
-}
-
-int battle::get_winners() {
-    if (enemy_characters.size() == 0) {
-        return ALLIES;
-    } else if (is_players_dead()) {
-        return ENEMIES;
-    }
-}
-
-character battle::get_player_character(int index) {
-    return this->player_characters[index];
-}
-
-character battle::get_enemy_character(int index) {
-    return this->enemy_characters[index];
-}
 
 #endif
